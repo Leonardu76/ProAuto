@@ -23,13 +23,16 @@ namespace Proauto.Data
                 {
                     Id = 1,
                     Name = "João Silva",
-                    CPF = "11111111111"
+                    CPF = "11111111111",
+                    Phone = "5531988888888"
+
                 },
                 new Associate
                 {
                     Id = 2,
                     Name = "Maria Souza",
-                    CPF = "22222222222"
+                    CPF = "22222222222",
+                    Phone = "5531999999999"
                 }
             );
 

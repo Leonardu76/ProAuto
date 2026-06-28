@@ -31,6 +31,7 @@ namespace Proauto.Controllers
                 Id = associate.Id,
                 Name = associate.Name,
                 CPF = associate.CPF,
+                Phone = associate.Phone,
                 Plate = associate.Vehicle?.Plate,
                 Street = associate.Address?.Street,
                 Number = associate.Address?.Number,

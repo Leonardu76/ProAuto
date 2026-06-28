@@ -6,6 +6,7 @@
 
         public required string Name { get; set; }
         public required string CPF { get; set; }
+        public required string Phone { get; set; }
         public required string Plate { get; set; }
 
         // endereço editável
