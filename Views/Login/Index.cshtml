@@ -1,0 +1,66 @@
+﻿<div class="container mt-12">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    <h4>Login PROAUTO</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="post" action="/Login/Auth">
+
+                        <!-- CPF -->
+                        <div class="mb-3">
+                            <label for="CPF" class="form-label">
+                                CPF
+                            </label>
+
+                            <input type="text"
+                                   id="CPF"
+                                   name="CPF"
+                                   class="form-control"
+                                   data-required="true"
+                                   placeholder="Ex: 11111111111 (somente números)" />
+
+                            <small class="text-muted">
+                                Digite o CPF sem pontos ou traços
+                            </small>
+                        </div>
+
+                        <!-- PLACA -->
+                        <div class="mb-3">
+                            <label for="Plate" class="form-label">
+                                Placa do veículo
+                            </label>
+
+                            <input type="text"
+                                   id="Plate"
+                                   name="Plate"
+                                   class="form-control"
+                                   data-required="true"
+                                   placeholder="Ex: ABC1234" />
+
+                            <small class="text-muted">
+                                Formato padrão: ABC1234
+                            </small>
+                        </div>
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @Html.ValidationSummary()
+                            </div>
+                        }
+                        <button class="btn btn-primary w-100">
+                            Entrar
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

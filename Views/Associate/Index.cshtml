@@ -1,0 +1,94 @@
+﻿<div class="container mt-4">
+
+    <div class="card shadow mb-3">
+        <div class="card-body">
+            <h4>@Model.Name</h4>
+            <p><b>CPF:</b> @Model.CPF</p>
+            <p><b>Placa:</b> @Model.Plate</p>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-header">
+            <h5>Editar endereço</h5>
+        </div>
+
+        <div class="card-body">
+            <form method="post" action="/Associate/UpdateAddress">
+
+                <input type="hidden" name="Id" value="@Model.Id" />
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-2">
+                        <label for="Street" class="form-label">Rua</label>
+                        <input id="Street"
+                               class="form-control"
+                               name="Street"
+                               value="@Model.Street"
+                               data-required="true" />
+                    </div>
+
+                    <div class="col-md-3 mb-2">
+                        <label for="Number" class="form-label">Número</label>
+                        <input id="Number"
+                               class="form-control"
+                               name="Number"
+                               value="@Model.Number"
+                               data-required="true" />
+                    </div>
+
+                    <div class="col-md-3 mb-2">
+                        <label for="ZipCode" class="form-label">CEP</label>
+                        <input id="ZipCode"
+                               class="form-control"
+                               name="ZipCode"
+                               value="@Model.ZipCode"
+                               data-required="true" />
+                    </div>
+
+                    <div class="col-md-6 mb-2">
+                        <label for="City" class="form-label">Cidade</label>
+                        <input id="City"
+                               class="form-control"
+                               name="City"
+                               value="@Model.City"
+                               data-required="true" />
+                    </div>
+
+                    <div class="col-md-3 mb-2">
+                        <label for="State" class="form-label">Estado</label>
+                        <input id="State"
+                               class="form-control"
+                               name="State"
+                               value="@Model.State"
+                               data-required="true" />
+                    </div>
+
+                </div>
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show">
+                        @TempData["Success"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        @TempData["Error"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                <button class="btn btn-success">
+                    Salvar
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
