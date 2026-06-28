@@ -43,8 +43,8 @@ CPF: 22222222222
 Placa: XYZ9999
 🧭 Como rodar o projeto
 1️⃣ Clonar o repositório
-git clone https://github.com/SEU-USUARIO/ProAuto.git
-2️⃣ Abrir no Visual Studio 2022
+git clone [https://github.com/SEU-USUARIO/ProAuto.git](https://github.com/Leonardu76/ProAuto)
+2️⃣ Abrir no Visual Studio
 Abrir o arquivo .sln
 3️⃣ Configurar banco de dados
 
